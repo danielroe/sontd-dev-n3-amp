@@ -1,0 +1,30 @@
+sidebar:
+  dashboard: ダッシュボード
+  users: ユーザー一覧
+  blogs: 記事
+dashboard:
+  welcome: ようこそ！
+common:
+  logout: ログアウト
+  login: ログイン
+  signup: アカウントの作成
+  profile: プロフィール
+layouts:
+  dashboard:
+    title_template: '{title} - Nuxt Starter Admin'
+    title: Nuxt Starter Admin
+  default:
+    title_template: '{title} - Nuxt Starter'
+    title: Nuxt Starter
+title:
+  home: ホーム
+  admin: ダッシュボード
+  admin_blogs: 記事
+  login: ログイン
+login:
+  title: ログイン
+  email: メールアドレス
+  password: パスワード
+  submit: ログイン
+  session_expired: セッションが終了しました 。もう一度ログインしてみてください。
+  unauthorized: 続行するにはログインしてください。

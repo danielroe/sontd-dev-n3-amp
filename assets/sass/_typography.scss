@@ -1,0 +1,13 @@
+@use 'mixins';
+
+$font-size-map: (
+  3xl: 3rem,
+  2xl: 2rem,
+  xl: 1.5rem,
+  lg: 1.125rem,
+  md: 1rem,
+);
+
+.text {
+  @include mixins.modifiers($font-size-map, 'font-size', '-');
+}

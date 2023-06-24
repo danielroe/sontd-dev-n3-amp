@@ -1,0 +1,30 @@
+sidebar:
+  dashboard: Bảng điều khiển
+  users: Tài khoản
+  blogs: Bài đăng
+dashboard:
+  welcome: Xin chào!
+common:
+  logout: Đăng xuất
+  login: Đăng Nhập
+  signup: Đăng Ký
+  profile: Tài khoản
+layouts:
+  dashboard:
+    title_template: '{title} - Nuxt Starter Admin'
+    title: Nuxt Starter Admin
+  default:
+    title_template: '{title} - Nuxt Starter'
+    title: Nuxt Starter
+title:
+  home: Trang chủ
+  admin: Bảng điều khiển
+  admin_blogs: Bài đăng
+  login: Đăng nhập
+login:
+  title: Đăng nhập
+  email: Email
+  password: Mật khẩu
+  submit: Đăng Nhập
+  session_expired: Phiên làm việc đã kết thúc. Vui lòng đăng nhập lại
+  unauthorized: Vui lòng đăng nhập để tiếp tục

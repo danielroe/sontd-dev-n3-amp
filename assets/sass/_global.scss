@@ -1,0 +1,23 @@
+.min-h-screen {
+  min-height: 100vh;
+}
+
+#nprogress {
+  .bar {
+    background-color: rgb(98, 0, 238);
+  }
+}
+
+.fixed {
+  position: fixed !important;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.25s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}

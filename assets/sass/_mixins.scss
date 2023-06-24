@@ -1,0 +1,49 @@
+// MIN DEVICES
+$breakpoints: (
+  xs: 375px,
+  sm: 600px,
+  md: 960px,
+  lg: 1280px,
+  xl: 1920px,
+);
+@mixin media-breakpoint-up($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media only screen and (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`.Please make sure it is defined in $breakpoints map.';
+  }
+}
+
+@mixin modifiers(
+  $map,
+  $attribute,
+  $prefix: '-',
+  $separator: '-',
+  $base: 'base'
+) {
+  @each $key, $value in $map {
+    &#{if($key != $base, #{$prefix}#{$key}, '')} {
+      @if type-of($value) == 'map' {
+        @include modifiers($value, $attribute, $separator);
+      } @else {
+        #{$attribute}: $value !important;
+      }
+    }
+  }
+
+  @each $breakpoint, $_ in $breakpoints {
+    @each $key, $value in $map {
+      @include media-breakpoint-up($breakpoint) {
+        &\:#{if($key != $base, #{$breakpoint}#{$prefix}#{$key}, '')} {
+          @if type-of($value) == 'map' {
+            @include modifiers($value, $attribute, $separator);
+          } @else {
+            #{$attribute}: $value !important;
+          }
+        }
+      }
+    }
+  }
+}
