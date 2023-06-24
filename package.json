@@ -1,8 +1,9 @@
 {
   "private": true,
   "engines": {
-    "node": "^16.15.0"
+    "node": "^18.16.0"
   },
+  "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -27,7 +28,7 @@
     "eslint-plugin-vue": "^9.8.0"
   },
   "dependencies": {
-    "@nuxtjs/i18n": "8.0.0-beta.10",
+    "@nuxtjs/i18n-edge": "8.0.0-beta.12-28113576.7bc33c3",
     "@mdi/font": "^7.1.96",
     "@pinia/nuxt": "^0.4.6",
     "@types/lodash": "^4.14.191",

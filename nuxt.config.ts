@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     transpile: ['vuetify'],
   },
 
-  modules: ['@pinia/nuxt', './modules/auth', '@nuxtjs/i18n'],
+  modules: ['@pinia/nuxt', './modules/auth', '@nuxtjs/i18n-edge'],
 
   routeRules: {
     '/admin/**': { ssr: false },
@@ -40,9 +40,6 @@ export default defineNuxtConfig({
     lazy: true,
     langDir: 'lang',
     defaultLocale: 'en',
-    vueI18n: {
-      fallbackLocale: 'en',
-    },
   },
 
   auth: {
